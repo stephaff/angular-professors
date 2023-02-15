@@ -1,0 +1,20 @@
+<h3 class="center">Liste des professeurs</h3>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let professor of professeurs" class="col m4 s6">
+            <div class="card horizontal ma-carte" (click)="goToProfesseur(professor)">
+                <div class="card-image">
+                    <img src="../../../assets/{{ professor.photo }}" alt="photo">
+                </div>
+                <div class="card-stacked">
+                    <span>{{ professor.nom }}</span>
+                    <span>{{ professor.prenom }}</span>
+                    <span>
+                        {{ professor.matiere }}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
